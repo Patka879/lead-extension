@@ -2,13 +2,16 @@
 
 let input = document.getElementById("input-el")
 const button = document.getElementById("button-el")
-const myLeads = []
 const ulEl = document.getElementById("ul-el")
+let myLeads = []
+
 
 button.addEventListener("click", function() {
     myLeads.push(input.value)
     input.value = ""
+    localStorage.setItem('myLeads', JSON.stringify(myLeads))
     addToTheList()
+    console.log(localStorage.getItem('myLeads'))
 })
 
 function addToTheList() {
