@@ -1,7 +1,8 @@
 "use strict"
 
 let input = document.getElementById("input-el")
-const button = document.getElementById("button-el")
+const saveButton = document.getElementById("save-btn")
+const deleteButton = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
 let myLeads = []
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
@@ -11,11 +12,17 @@ if (leadsFromLocalStorage) {
     renderList()
 }
 
-button.addEventListener("click", function() {
+saveButton.addEventListener("click", function() {
     myLeads.push(input.value)
     input.value = ""
     localStorage.setItem('myLeads', JSON.stringify(myLeads))
-    addToTheList()
+    renderLeads()
+})
+
+deleteButton.addEventListener("click", function() {
+    myLeads = []
+    ulEl.innerHTML = ""
+    localStorage.clearItem()
 })
 
 function renderList() {
