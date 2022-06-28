@@ -1,10 +1,10 @@
 "use strict"
 
 let myLeads = []
-let oldLeads =[]
 const input = document.getElementById("input-el")
 const saveButton = document.getElementById("save-btn")
 const deleteButton = document.getElementById("delete-btn")
+const tabButton = document.getElementById("tab-btn")
 const ulEl = document.getElementById("ul-el")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
@@ -38,4 +38,12 @@ deleteButton.addEventListener("dblclick", function() {
     myLeads = []
     localStorage.clear()
     render(myLeads)
+})
+
+tabButton.addEventListener("click", function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("My Leads", JSON.stringify(myLeads))
+        render(myLeads)
+     })
 })

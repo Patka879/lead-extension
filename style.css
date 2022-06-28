@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    min-width: 400px;
+    min-width: 420px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,44 +20,46 @@ input:focus {
 }
 
 button {
-    width: 150px;
+    width: 120px;
     height: 40px;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 550;
     padding: 10px 15px;
-    cursor: pointer
+    cursor: pointer;
+    border: 1px solid rgb(228, 124, 150);
+    margin-left: 5px;
 }
 
 #save-btn {
-    margin: 0 10px;
+    margin-left: 10px
+}
+
+#save-btn, #tab-btn {
     color: white;
     background-color: rgb(228, 124, 150);
 }
 
-#save-btn:hover {
+#save-btn:hover, #tab-btn:hover {
     background-color: white;
     color:rgb(228, 124, 150);
-    border: 1px solid rgb(228, 124, 150);
     transition: all .15s;
 }
 
 #save-btn:active {
-        background: rgb(195, 104, 126);
+    background: rgb(195, 104, 126);
 }
 
 #delete-btn {
     background-color: white;
     color: rgb(228, 124, 150);
-    margin-left: 5px;
-    border: 1px solid rgb(228, 124, 150)
+    margin-right: 10px;
 }
 
 #delete-btn:hover {
     background-color: rgb(228, 124, 150);
     color: white;
-    border: none;
-    transition: all .5s;
+    transition: all .15s;
 }
 
 #delete-btn:active {
@@ -72,7 +74,7 @@ ul {
 
 li {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 a {
