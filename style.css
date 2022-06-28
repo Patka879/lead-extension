@@ -14,6 +14,10 @@ input {
     box-sizing: border-box; 
 }
 
+input:focus {
+    border-color: white;
+}
+
 button {
     width: 140px;
     height: 40px;
@@ -25,6 +29,11 @@ button {
     margin: 0 10px;
     cursor: pointer
 } 
+
+#delete-button {
+    color: white;
+    margin-left: 0
+}
 
 ul {
     list-style: none;
