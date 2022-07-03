@@ -14,7 +14,7 @@ We can also save links manually with "SAVE INPUT". In order to remove all saved 
 Project is created with:
 * JavaScript
 ## Setup 
-To start this project localy:
+To start this project locally:
 
 Clone the repository:
 ```
