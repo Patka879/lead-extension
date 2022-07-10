@@ -18,7 +18,7 @@ To start this project locally:
 
 Clone the repository:
 ```
-git clone git@github.com:Patka879/lead-extension.git
+$ git clone git@github.com:Patka879/lead-extension.git
 ```
 Go to Google Chrome web browser and open Extensions --> Manage extensions.<br>
 Open "Developer Mode". (top-right corner)
